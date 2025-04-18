@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Git checkout'){
             steps{
-                git changelog: false, credentialsId: 'dadah_git_cred', poll: false, url: 'https://github.com/Dadah3227/python-coding.git'
+                git changelog: false, credentialsId: 'ci-file-credential', poll: false, url: 'https://github.com/Dadah3227/python-coding.git'
+                sh 'ls -ltr' // Linux
+             // bat 'dir' //windows
             }
         }
     }
